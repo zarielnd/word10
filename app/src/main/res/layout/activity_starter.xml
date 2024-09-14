@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/dotIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:layout_below="@id/logoImage"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:background="@drawable/starter_border_top_corners"
+        android:orientation="vertical">
+        <View
+            android:layout_width="100sp"
+            android:layout_height="8dp"
+            android:background="@drawable/starter_custom_active_dot"
+            android:layout_marginBottom="50sp"/>
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:gravity="center"
+            android:text="Learn the local language\n for free!"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/subDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:gravity="center"
+            android:text="Learn all local languages\n interactively at your fingertips!"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:gravity="center">
+            <View
+                android:layout_width="24dp"
+                android:layout_height="8dp"
+                android:background="@drawable/starter_custom_active_dot"
+                android:layout_marginEnd="5dp"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/starter_custom_inactive_dot"
+                android:layout_marginEnd="5dp"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/starter_custom_inactive_dot"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/light_blue"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:text="Register"
+            app:backgroundTint="@null"
+            android:background="@drawable/starter_button_border"
+            android:drawableEnd="@drawable/starter_white_play_arrow"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Login"
+            android:textColor="@color/light_blue"
+            app:backgroundTint="@null"
+            android:background="@drawable/starter_button_border"
+            android:drawableEnd="@drawable/starter_blue_play_arrow"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
