@@ -7,26 +7,27 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.word10.android.services.DBHelper;
 
 public class Login extends AppCompatActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
-    private Button loginButton;
-    private TextView signupText;
-    private ImageView logoImageView;
+    private DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        logoImageView = findViewById(R.id.imageView);
+        ImageView logoImageView = findViewById(R.id.imageView);
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.password);
-        loginButton = findViewById(R.id.loginButton);
-        signupText = findViewById(R.id.signupText);
+        Button loginButton = findViewById(R.id.loginButton);
+        TextView signupText = findViewById(R.id.signupText);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,11 @@ public class Login extends AppCompatActivity {
     }
 
     private void loginUser(String username, String password) {
-        Toast.makeText(this, "Login successful for " + username, Toast.LENGTH_SHORT).show();
+        boolean checkUserPass = dbHelper.checkUser(username, password);
+        if (checkUserPass) {
+            Toast.makeText(this, "Login successful for " + username, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+        }
     }
 }
