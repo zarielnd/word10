@@ -1,4 +1,4 @@
-package com.word10.android.services;
+package com.vocab10.android.services;
 
 import android.content.ContentValues;
 import android.content.Context;

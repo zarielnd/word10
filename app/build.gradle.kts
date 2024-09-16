@@ -3,12 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.word10.android"
+    namespace = "com.vocab10.android"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.word10.android"
+        applicationId = "com.vocab10.android"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

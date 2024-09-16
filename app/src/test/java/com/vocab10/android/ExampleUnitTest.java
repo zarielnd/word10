@@ -1,4 +1,4 @@
-package com.word10.android;
+package com.vocab10.android;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.word10.android;
+package com.vocab10.android;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.word10.android.services.DBHelper;
+import com.vocab10.android.services.DBHelper;
 
 public class Login extends AppCompatActivity {
 
