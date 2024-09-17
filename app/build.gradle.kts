@@ -33,7 +33,9 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.logging.interceptor)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
